@@ -1,5 +1,5 @@
 'use strict';
-(function() {
+(function () {
 
   window.addEventListener('load', init);
 
@@ -17,18 +17,18 @@
     let getImageButton = id('get-image');
     let emailForm = id('user-information');
     let viewUser = id('view-users');
-    addButton.addEventListener('click', function() {
+    addButton.addEventListener('click', function () {
       addToList(id('my-list'));
     });
-    clearButton.addEventListener('click', function() {
+    clearButton.addEventListener('click', function () {
       clearList(id('my-list'));
     });
     getImageButton.addEventListener('click', getRoverImage);
     for (let i = 0; i < contents.length; i++) {
-      contents[i].addEventListener('mouseover', function() {
+      contents[i].addEventListener('mouseover', function () {
         toggleStyle(contents[i], true);
       });
-      contents[i].addEventListener('mouseout', function() {
+      contents[i].addEventListener('mouseout', function () {
         toggleStyle(contents[i], false);
       });
     }
@@ -71,7 +71,7 @@
     let params = new FormData(id('user-information'));
     params.append('username', id('username').value);
     params.append('email', id('email-address').value);
-    fetch('/saveusers', {method: 'POST', body: params})
+    fetch('/saveusers', { method: 'POST', body: params })
       .then(statusCheck)
       .then(resp => resp.text())
       .then((resp) => {
