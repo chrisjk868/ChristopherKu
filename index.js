@@ -1,13 +1,3 @@
-/**
- * Name: Christopher Ku
- * Date: 11-18-2021
- * Section CSE 154 AA
- *
- * This JS file is responsible for acting interactivity to my resume page
- * here I try to implement the behaviour that allows different users to
- * view my past expereiences and also join my mailing list as a contact
- * for the future.
- */
 'use strict';
 (function() {
 
